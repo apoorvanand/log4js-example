@@ -1,5 +1,34 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+head
+  meta(charset='UTF-8')
+  title Node Sample App
+  // CSS
+  // load bootstrap and our own personal stylesheet
+  link(href='//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css' rel='stylesheet')
+  link(href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootlint/0.14.2/bootlint.min.js' integrity='sha384-SLfe/wBrCVfyGjtLhfUmA5cYQLnNVTRmwMUJ11s7x5HxXCKom2oeEwX9bvY74CAs' crossorigin='anonymous')
+.container
+  .jumbotron
+    h1 This Is Heroku Awesome!
+    p
+      | This is the sample of a tutorial on 
+      a(href='http://scotch.io') scotch.io
+    a.btn.btn-primary.btn-lg(href='http://scotch.io/tutorials/') View the Tutorial
+form.form-horizontal(action='/action_page.php')
+  .form-group
+    label.control-label.col-sm-2(for='email') Email:
+    .col-sm-10
+      input#email.form-control(type='email' placeholder='Enter email')
+  .form-group
+    label.control-label.col-sm-2(for='pwd') Password:
+    .col-sm-10
+      input#pwd.form-control(type='password' placeholder='Enter password')
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      .checkbox
+        label
+          input(type='checkbox')
+          |  Remember me
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit') Submit
